@@ -1,0 +1,48 @@
+<!-- 
+  /index.html
+-->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/layout}">
+
+<head>
+</head>
+
+<body>
+  <!-- レイアウト部品：Breadcrumb -->
+  <nav layout:fragment="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active">Home</li>
+    </ol>
+  </nav>
+
+  <!-- レイアウト部品：見出し -->
+  <h1 layout:fragment="heading-title">
+    <div class="mb-4">Spring Data JPA Sample</div>
+  </h1>
+
+  <!-- レイアウト部品：コンテンツ -->
+  <main layout:fragment="main-contents">
+    <section>
+      <ul>
+        <li>
+          <a th:href="@{/sample01/}">
+            <i class="bi bi-arrow-right-circle-fill me-2"></i>Sample01 - メソッド名からクエリを導出（クエリビルダメカニズム）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample02/}">
+            <i class="bi bi-arrow-right-circle-fill me-2"></i>Sample02 - @QueryアノテーションでネイティブSQLを実行
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample03/}">
+            <i class="bi bi-arrow-right-circle-fill me-2"></i>Sample03 - 名前付きクエリで外部ファイルのネイティブSQLを実行
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- 
+  /sample02/result-table.html
+-->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/layout}">
+
+<head>
+</head>
+
+<body>
+  <!-- レイアウト部品：Breadcrumb -->
+  <nav layout:fragment="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+      <li class="breadcrumb-item"><a th:href="@{/sample02/}">Sample02</a></li>
+      <li class="breadcrumb-item active">Result</li>
+    </ol>
+  </nav>
+
+  <!-- レイアウト部品：見出し -->
+  <h1 class="display-3" layout:fragment="heading-title">
+    Result
+  </h1>
+
+  <!-- レイアウト部品：コンテンツ -->
+  <main layout:fragment="main-contents">
+    <!-- 共通部品：結果テーブル -->
+    <th:block th:replace="~{fragments/result :: table}"></th:block>
+  </main>
+</body>
+
+</html>

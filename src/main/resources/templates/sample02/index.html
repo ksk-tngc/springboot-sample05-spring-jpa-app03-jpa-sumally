@@ -1,0 +1,50 @@
+<!-- 
+  /sample02/index.html
+-->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/layout}">
+
+<head>
+</head>
+
+<body>
+  <!-- レイアウト部品：Breadcrumb -->
+  <nav layout:fragment="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+      <li class="breadcrumb-item active">Sample02</li>
+    </ol>
+  </nav>
+
+  <!-- レイアウト部品：見出し -->
+  <h1 layout:fragment="heading-title">
+    <div class="mb-4">JPA Sample02</div>
+  </h1>
+
+  <!-- レイアウト部品：コンテンツ -->
+  <main layout:fragment="main-contents">
+    <section>
+      <p><code>@Query</code>アノテーションでネイティブSQLを実行：</p>
+      <ul>
+        <li>
+          <a th:href="@{/sample02/searchByNameLike}">
+            <i class="bi bi-emoji-smile me-2"></i>名前でLIKE検索
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample02/searchByNotLeaveAndAge20sOrderBySalaryDesc}">
+            <i class="bi bi-emoji-smile me-2"></i>退社していない20代の社員を給料の降順で検索
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample02/searchByDepartmentNameAndLeaveDateGreaterThanEqual}">
+            <i class="bi bi-emoji-smile me-2"></i>部署名と入社年（以降）で検索
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>

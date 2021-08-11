@@ -1,0 +1,127 @@
+<!-- 
+  /sample01/index.html
+-->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layout/layout}">
+
+<head>
+</head>
+
+<body>
+  <!-- レイアウト部品：Breadcrumb -->
+  <nav layout:fragment="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+      <li class="breadcrumb-item active">Sample01</li>
+    </ol>
+  </nav>
+
+  <!-- レイアウト部品：見出し -->
+  <h1 layout:fragment="heading-title">
+    <div class="mb-4">JPA Sample01</div>
+  </h1>
+
+  <!-- レイアウト部品：コンテンツ -->
+  <main layout:fragment="main-contents">
+    <section>
+      <p>メソッド名からクエリを導出（クエリビルダメカニズム）：</p>
+      <ul>
+        <li>
+          <a th:href="@{/sample01/findAllOrderById}">
+            <i class="bi bi-emoji-smile me-2"></i>IDの昇順で全件取得
+            （<i class="bi bi-code-slash"></i><code>findAll</code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findAllOrderByIdDesc}">
+            <i class="bi bi-emoji-smile me-2"></i>IDの降順で全件取得
+            （<i class="bi bi-code-slash"></i><code>findAll</code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/count}">
+            <i class="bi bi-emoji-smile me-2"></i>テーブルの件数を取得
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findById}">
+            <i class="bi bi-emoji-smile me-2"></i>IDが10のデータを取得
+            （<i class="bi bi-code-slash"></i><code>findById</code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByDepartmentNameOrderBySalaryDesc}">
+            <i class="bi bi-emoji-smile me-2"></i>部署が経理のデータを給料の降順で取得
+            （<i
+              class="bi bi-code-slash"></i><code>findByDepartmentName<span class="text-danger">OrderBy</span>Salary<span class="text-danger">Desc</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByDepartmentNameIn}">
+            <i class="bi bi-emoji-smile me-2"></i>部署が開発か経理のデータを部署名とIDの昇順で取得
+            （<i class="bi bi-code-slash"></i><code>findByDepartmentName<span class="text-danger">In</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByDepartmentNameNotIn}">
+            <i class="bi bi-emoji-smile me-2"></i>部署が開発と経理以外のデータを取得
+            （<i class="bi bi-code-slash"></i><code>findByDepartmentName<span class="text-danger">NotIn</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByNameLike}">
+            <i class="bi bi-emoji-smile me-2"></i>名前に"1"が含まれるデータを取得
+            （<i class="bi bi-code-slash"></i><code>findByName<span class="text-danger">Like</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByNameNotLike}">
+            <i class="bi bi-emoji-smile me-2"></i>名前に"1"が含まれないデータを取得
+            （<i class="bi bi-code-slash"></i><code>findByName<span class="text-danger">NotLike</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByAgeLessThanAndDepartmentName}">
+            <i class="bi bi-emoji-smile me-2"></i>年齢が30未満かつ部署が開発のデータを取得
+            （<i
+              class="bi bi-code-slash"></i><code>findByAge<span class="text-danger">LessThanAnd</span>DepartmentName</code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByAgeGreaterThanEqualOrSalaryGreaterThanEqual}">
+            <i class="bi bi-emoji-smile me-2"></i>年齢が30以上または給料が25万以上のデータを取得
+            （<i
+              class="bi bi-code-slash"></i><code>findByAge<span class="text-danger">GreaterThanEqualOr</span>Salary<span class="text-danger">GreaterThanEqual</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByDepartmentNameNot}">
+            <i class="bi bi-emoji-smile me-2"></i>部署が経理でないデータを取得
+            （<i class="bi bi-code-slash"></i><code>findByDepartmentName<span class="text-danger">Not</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByLeaveDateIsNull}">
+            <i class="bi bi-emoji-smile me-2"></i>退社日がNULLのデータを取得
+            （<i class="bi bi-code-slash"></i><code>findByLeaveDate<span class="text-danger">IsNull</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByLeaveDateIsNotNull}">
+            <i class="bi bi-emoji-smile me-2"></i>退社日がNULLでないデータを取得
+            （<i class="bi bi-code-slash"></i><code>findByLeaveDate<span class="text-danger">IsNotNull</span></code>）
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/sample01/findByAgeBetween}">
+            <i class="bi bi-emoji-smile me-2"></i>年齢が20代のデータを取得
+            （<i class="bi bi-code-slash"></i><code>findByAge<span class="text-danger">Between</span></code>）
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>

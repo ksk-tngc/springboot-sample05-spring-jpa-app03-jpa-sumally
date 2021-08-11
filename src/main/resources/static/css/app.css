@@ -1,0 +1,33 @@
+ul {
+  padding-left: 10px;
+}
+
+li {
+  list-style: none;
+  padding: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.result-table__id {
+  width: 90px;
+}
+
+.result-table__age {
+  width: 140px;
+}
+
+.result-table__salary {
+  width: 150px;
+}
+
+.result-table__hire-date,
+.result-table__leave-date {
+  width: 150px;
+}
+
+.common__hr {
+  border-bottom: 1px solid rgb(227, 227, 227);
+}

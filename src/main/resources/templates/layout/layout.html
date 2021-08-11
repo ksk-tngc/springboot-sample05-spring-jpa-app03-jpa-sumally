@@ -1,0 +1,34 @@
+<!--
+  共通レイアウト定義
+-->
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap-icons/font/bootstrap-icons.css}">
+  <!-- app.css -->
+  <link rel="stylesheet" th:href="@{/css/app.css}">
+  <title>Spring Data JPA Sample</title>
+</head>
+
+<body>
+  <!-- コンテナ -->
+  <div class="container-fluid">
+    <!-- レイアウト部品：Breadcrumb -->
+    <nav layout:fragment="breadcrumb"></nav>
+    <!-- レイアウト部品：見出し -->
+    <h1 class="display-3" layout:fragment="heading-title"></h1>
+    <!-- レイアウト部品：コンテンツ -->
+    <main layout:fragment="main-contents"></main>
+  </div>
+
+  <!-- Bootstrap -->
+  <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>
