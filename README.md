@@ -15,11 +15,11 @@
 
 ## 画面
 
-### トップページ  
+#### トップページ  
 
 <img width="1200" src="https://user-images.githubusercontent.com/59589496/128970836-85d67824-e503-45b6-9ac8-42061473d2f6.png">  
 
-### Sample01 - メソッド名からクエリを自動生成
+#### Sample01 - メソッド名からクエリを自動生成
 
 index.html  
 <img width="1200" src="https://user-images.githubusercontent.com/59589496/128970913-e2d5f51b-5bb5-4e2d-a654-30822b1c8869.png">  
@@ -27,7 +27,7 @@ index.html
 検索結果ページ  
 <img width="1200" src="https://user-images.githubusercontent.com/59589496/128970985-ddfb4af9-1b96-4947-8cc6-3a728cce8bad.png">  
 
-### Sample02 - @QueryアノテーションでネイティブSQLを実行
+#### Sample02 - @QueryアノテーションでネイティブSQLを実行
 
 index.html
 <img width="1200" src="https://user-images.githubusercontent.com/59589496/128971212-f738cb6a-9111-42d4-970d-965e1113d37f.png">  
@@ -35,7 +35,7 @@ index.html
 検索結果ページ  
 <img width="1200" src="https://user-images.githubusercontent.com/59589496/128971248-8f9b5ede-16f9-4527-927f-abec1b3148f5.png">  
 
-### Sample03 - 名前付きクエリで外部ファイルのネイティブSQLを実行
+#### Sample03 - 名前付きクエリで外部ファイルのネイティブSQLを実行
 
 index.html  
 <img width="1200" src="https://user-images.githubusercontent.com/59589496/128971345-99700b09-65ab-4d7b-b556-8fbd4db1f90d.png">  
@@ -48,7 +48,7 @@ index.html
 
 ## フォルダ構成
 
-<img width="300" src="https://user-images.githubusercontent.com/59589496/128973054-c838e43a-1d04-450a-aee9-8c146a032fd7.png">  
+<img width="360" src="https://user-images.githubusercontent.com/59589496/128973054-c838e43a-1d04-450a-aee9-8c146a032fd7.png">  
 
 ## 依存関係
 
